@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mouse Events </title>
+    
+    <style>
+        h2{
+            text-align: center;
+            background-color: cornsilk;
+        }
+
+        .mouse{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(101, 30, 172);
+            width: 200px;
+            height: 200px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <h2> Mouse Events </h2>
+
+    <div class="mouse" id="events">
+        <h3 class="bold"> List of MouseEvents: <ul>
+            <li> click </li>
+            <li> dblclick </li>
+            <li> contextmenu </li>
+            <li> mouseenter </li>
+            <li> mouseleave </li>
+        </ul> </h3>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#events").click(function(){
+                $(".bold").css("color","rgb(255,127,80)")
+            })
+
+            $("#events").dblclick(function(){
+                $(".mouse").css("background-color","#668096")
+                $(".mouse").css("width","400px")
+                $(".mouse").css("height","400px")
+            })
+
+            $("#events").contextmenu(function(){
+                $(".mouse").css("background-color","#F9D2D3")
+            })
+
+            $("#events").mouseenter(function(){
+                $(".mouse").css("background-color","#CCBFAB")
+            })
+
+            $("#events").mouseleave(function(){
+                $(".mouse").css("background-color","#DD9E7B")
+            })
+            
+        })
+    </script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Advacned Selectors </title>
+    <style>
+        h2{
+            text-align: center;
+            background-color: cadetblue;
+            border-radius: 4px;
+        }
+
+        #adv{
+            background-color: blanchedalmond;
+            width: 450px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2> Advanced Selectors </h2>
+
+    <div id="adv">
+        <h3> Types of Selectors </h3>
+        <p> First - $("#id") </p>
+        <p> Second - $(".class") </p>
+        <p> Third - $("tags") </p>
+        <p> Fourth - $("*") : which picks all the tags in the html. </p>
+        <p> Fifth - Use multiple tags, classes, ids... </p>
+    </div>
+
+    <ul id="fruits">
+        <li> Apple </li>
+        <li class="com"> Guava </li>
+        <li> PineApple </li>
+        <li class="com"> Peach </li>
+        <li> Pear </li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function(){
+            $("h3").css("text-align","center")
+            $("p").css("text-align","center")
+            $("p:nth(2)").css("color","blue")
+        })
+
+    </script>
+
+</body>
+</html>

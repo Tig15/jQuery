@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Basic Syntax </title>
+    <style>
+        h3{
+            text-align: center;
+            background-color: bisque;
+        }
+
+        .cont{
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        #test1{
+            background-color: aquamarine;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+        }
+
+        #test2{
+            background-color: firebrick;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Basic Syntax for jQuery -->
+    <h3> jQuery Selectors </h3>
+
+    <div class="cont">
+        <div id="test1">
+            <h2> HTML </h2>
+            <p> The First Requirement for learning jQuery. </p>
+        </div>
+        <div id="test2">
+            <h2> CSS </h2>
+            <p> The Second Requirement for learning jQuery. </p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            let a = $("#test1").html()
+            console.log(a)
+
+            let b = $("#test2").html()
+            console.log(b)
+
+        })
+
+    </script>
+
+    
+</body>
+</html>

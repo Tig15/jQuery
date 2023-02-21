@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FormEvents </title>
+    <style>
+        h3 {
+            border-radius: 3px;
+            border: 4px solid saddlebrown;
+            background-color: darkkhaki;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .box {
+            background-color: cadetblue;
+            border: 2px double goldenrod;
+            width: 300px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .laby1 {
+            margin: 6px 6px;
+        }
+
+        #in1,
+        #in2,
+        #in3, #in4 {
+            margin: 1px;
+            padding: 2px;
+        }
+
+        #in5{
+            width: 65px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3> Form Events </h3>
+
+    <div class="container">
+        <div class="box">
+            <label class="laby1" for="">UserName: <input type="text" id="in1"> </label>
+
+            <label class="laby1" for="">Password: <input type="password" id="in2"> </label>
+
+            <label class="laby1" for="">Email: <input type="email" id="in3"> </label>
+
+            <label class="laby1" for=""> Colors:
+                <select id="in4">
+                    <option value="red">Red</option>
+                    <option value="org">Orange</option>
+                    <option value="pup">Purple</option>
+                    <option value="be">Blue</option>
+                    <option value="gen">Green</option>
+                </select>
+            </label>
+
+            <input type="submit" class="laby1" id="in5"> 
+
+        </div>
+    </div>
+</body>
+
+</html>
