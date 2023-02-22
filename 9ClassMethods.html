@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Class Methods </title>
+    <style>
+        body{
+            background-color: rgb(5, 82, 82);
+        }
+        h3{
+            background-color: rgb(245, 165, 60);
+            color: rgb(196, 245, 245);
+            border: 2px solid saddlebrown;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+
+        .box{
+            background-color: aliceblue;
+            border: 4px solid  rgb(134, 84, 167);
+            width: 300px;
+            height: 240px;
+        }
+        h4,p{
+            text-align: center;
+        }
+        button{
+            margin: 12px;
+        }
+
+        .stack{
+            background-color: rgb(132, 175, 91);
+        }
+        .pack{
+            background-color: crimson;
+        }
+
+    </style>
+</head>
+<body>
+    <h3> Let See How to Use Class Methods </h3>
+
+    <div class="container">
+        <div class="box" id="box1">
+            <h4 class="hecl">
+                Class Methods:
+            </h4>
+            <p class="para"> addClass <br> removeClass <br> toggleClass </p>
+            <button  id="addClassbtn"> Add Class</button> 
+            <button id="removeClassbtn"> Remove Class</button>  
+            <button id="toggleClassbtn"> Toggle Class</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <script>
+            $("#addClassbtn").click(function(){
+                $("#box1, h3").addClass("stack pack")
+            }) 
+            $("#removeClassbtn").click(function(){
+                $("#box1").removeClass("pack")
+            }) 
+            $("#toggleClassbtn").click(function(){
+                $("#box1, h3").toggleClass("stack")
+            }) 
+        
+    </script>
+
+</body>
+</html>

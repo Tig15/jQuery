@@ -42,18 +42,20 @@
     <script>
         $(document).ready(function(){
             $("#events").click(function(){
-                $(".bold").css("color","rgb(255,127,80)")
+                $(".bold").css("color","rgb(155,45,140)")
             })
 
             $("#events").dblclick(function(){
                 $(".mouse").css("background-color","#668096")
-                $(".mouse").css("width","400px")
-                $(".mouse").css("height","400px")
+                $(".mouse").css("width","300px")
+                $(".mouse").css("height","300px")
             })
 
+             // Changes while clicking right.
             $("#events").contextmenu(function(){
                 $(".mouse").css("background-color","#F9D2D3")
-            })
+            }) 
+           
 
             $("#events").mouseenter(function(){
                 $(".mouse").css("background-color","#CCBFAB")

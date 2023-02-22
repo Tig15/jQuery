@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FormEvents </title>
+    <style>
+        h3 {
+            border-radius: 3px;
+            border: 2apx solid saddlebrown;
+            background-color: darkkhaki;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .box {
+            background-color: cadetblue;
+            border: 2px double goldenrod;
+            width: 300px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .laby1 {
+            margin: 6px 6px;
+        }
+
+        #in1,
+        #in2,
+        #in3, #in4 {
+            margin: 1px;
+            padding: 2px;
+        }
+
+        #in5{
+            width: 65px;
+        }
+
+        .val{
+            border: 2px solid salmon;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3> Form Events </h3>
+
+    <div class="container">
+        <form class="box">
+            <label class="laby1" for="">UserName: <input type="text" id="in1"> </label>
+
+            <label class="laby1" for="">Password: <input type="password" id="in2"> </label>
+
+            <label class="laby1" for="">Email: <input type="email" id="in3"> </label>
+
+            <label class="laby1" for=""> Colors:
+                <select id="in4">
+                    <option value="Red">Red</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Purple">Purple</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                </select>
+            </label>
+
+            <input type="submit" class="laby1" id="in5"> 
+
+        </form>
+    </div>
+
+    <div class="val"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#in1, #in2, #in3").focus(function(){
+                $(this).css("background-color", "red")
+            })
+
+            $("#in1, #in2, #in3").blur(function(){
+                $(this).css("background-color", "orange")
+            })
+
+            $("#in4").change(function(){
+                $("#in4").css("background-color","black")
+                $("#in4").css("color","white")
+
+                let a = $("#in4").val()
+                $(".val").html(a)
+            })
+
+            $("#in1, #in2, #in3").select(function(){
+                $(this).css("background-color", "grey")
+            })
+
+            $(".box").submit(function(){
+                console.log("Form Submitted!")
+
+                let uname = $("#in1").val()
+
+                alert("Hey " + uname)
+            })
+
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> On & Off Methods </title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+
+        h3 {
+            border: 2px solid saddlebrown;
+            background-color: burlywood;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .box {
+            background-color: azure;
+            width: 600px;
+            height: 300px;
+        }
+
+        h5 {
+            border: 2px solid saddlebrown;
+            background-color: burlywood;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .container1{
+            display: flex;
+            justify-content: center;
+        }
+        .container2{
+            display: flex;
+            justify-content: space-around;
+        }
+        p{
+            border: 2px solid rgb(46, 109, 186);
+            background-color: rgb(168, 222, 135);
+            text-align: center;
+            width: 200px;
+            padding: 12px;
+            margin: 2px;
+        }
+        .bgcol{
+            background-color: chocolate;
+        }
+        #btn{
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3> On and Off Methods Uses </h3>
+    <div class="container1">
+        <div class="box" id="box1">
+            <h5> On and Off Methods </h5>
+            <div class="container2">
+                <p class="para1">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ad accusamus voluptatem id, est iure
+                    eaque, numquam libero aspernatur corporis quibusdam sit quasi excepturi reprehenderit dolorem quo,
+                    placeat molestias et?
+                </p>
+                <p class="para2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores vel, similique illum vitae sunt,
+                    consectetur adipisci excepturi id nostrum vero error, labore architecto dolorem numquam quibusdam
+                    ducimus dolorum tempora repellat.
+                </p>
+            </div>
+            <button id="btn"> Remove Event</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            // $("#box1").on("click", function(){
+            //     $(this).css("background-color","grey")
+            // })
+            $("#box1").on("mouseover mouseout", function(){
+                $(this).toggleClass("bgcol")
+            })
+
+            $("p").on({
+                "click":function(){
+                    $(this).css("background-color","blue")
+                },
+                "mouseover":function(){
+                    $(this).css("background-color","green")
+                },
+                "mouseout":function(){
+                    $(this).css("background-color","grey")
+                }
+            })
+
+            $("#btn").click(function () { 
+                $("p").off("mouseover mouseout")
+             })
+        })
+    </script>
+</body>
+
+</html>
