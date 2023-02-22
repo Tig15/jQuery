@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Methods</title>
+    <style>
+
+        body{
+            background-color: blanchedalmond;
+        }
+        h3{
+            background-color: darkcyan;
+            border: 3px solid rgb(82, 80, 80);
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .box1{
+            background-color: cornflowerblue;
+            border: 2px solid rgb(90, 81, 146);
+            width: 320px;
+            border-radius: 14px;
+        }
+        .box2 {
+            background-color: rgb(227, 216, 100);
+            border: 2px double goldenrod;
+            border-radius: 14px;
+            width: 300px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h4{
+            text-align: center;
+        }
+        .laby1 {
+            margin: 6px 6px;
+        }
+
+        #in1,
+        #in2,
+        #in3, #in4 {
+            margin: 1px;
+            padding: 2px;
+        }
+
+        #in5{
+            width: 65px;
+        }
+    </style>
+</head>
+<body>
+    <h3>
+        Get Methods
+    </h3>
+
+    <div class="container">
+        <div id="gran" class="box1 dfgs">
+            <h4> Ways of Using Get Methods </h4>
+            <ul id="unor">
+                <li>text</li>
+                <li>html</li>
+                <li>attr</li>
+                <li>val</li>
+            </ul>
+        </div>
+        <form class="box2">
+            <label class="laby1" for="">UserName: <input type="text" id="in1"> </label>
+
+            <label class="laby1" for="">Password: <input type="password" id="in2"> </label>
+
+            <label class="laby1" for="">Email: <input type="email" id="in3"> </label>
+
+            <label class="laby1" for=""> Colors:
+                <select id="in4">
+                    <option value="Red">Red</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Purple">Purple</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                </select>
+            </label>
+
+            <input type="submit" class="laby1" id="in5"> 
+
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            let a = $("#unor").text()
+            console.log(a)
+        })
+        $(document).ready(function(){
+            let a = $("#gran").html()
+            console.log(a)
+        })
+        $(document).ready(function(){
+            let a = $("#gran").attr('class')
+            console.log(a)
+        })
+        $(document).ready(function(){
+            $(".box2").submit(function(){
+                let uname = $("#in1").val()
+
+                alert("Hey " + uname)
+            })
+        })
+    </script>
+
+
+</body>
+</html>
