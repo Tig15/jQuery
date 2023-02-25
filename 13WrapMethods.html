@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wrap Methods </title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+        }
+        h2{
+            text-transform: uppercase;
+            font-family: fantasy;
+            text-align: center;
+            background-color: blanchedalmond;
+            padding: 6px;
+            margin: 6px;
+            border: 5px double seagreen;
+            border-radius: 2px;
+        }
+        .box{
+            display: flex;
+            gap: 2rem;
+            padding: 10px;
+        }
+        .btn{
+            background-color: rgba(210, 105, 30, 0.595);
+            border: 2px solid rgb(52, 44, 36);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: chocolate;
+        }
+        .para1{
+            background-color: brown;
+        }
+        .inner{
+            background-color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2> Using Wrap Methods</h2>
+  
+        <div class="box" id="box">
+            <p>A paragraph is a collection of related sentences dealing with a single topic. Learning to
+                write good paragraphs will help you as a writer stay on track during your drafting and revision stages
+            </p>
+            <p>The basic rule of thumb with paragraphing is to keep one idea to one paragraph. If you
+                begin to transition into a new idea, it belongs in a new paragraph. </p>
+            <p>The entire paragraph should concern itself with a single focus. If it begins with one focus
+                or major point of discussion, it should not end with another or wander within different ideas.</p>
+            <p>Coherence is the trait that makes the paragraph easily understandable to a reader. You can
+                help create coherence in your paragraphs by creating logical bridges and verbal bridges.</p>
+        </div>
+        <hr/>
+        <button id="wrapBtn" class="btn"> Wrap </button>
+        <button id="unwrapBtn" class="btn"> Unwrap </button>
+        <button id="wrapAllBtn" class="btn"> WrapAll </button>
+        <button id="wrapInnerBtn" class="btn"> WrapInner </button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#wrapBtn").click(function(){
+                    $("#box").wrap('<h3 class="para1"> </h3>')
+                })
+                $("#unwrapBtn").click(function(){
+                    $("#box p").unwrap()
+                })
+                $("#wrapAllBtn").click(function(){
+                    $("button").wrapAll('<div class="box"></div>')
+                })
+                $("#wrapInnerBtn").click(function(){
+                    $("h2").wrapInner('<span class="inner"></span>')
+                })
+            })
+        </script>
+</body>
+
+</html>

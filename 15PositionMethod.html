@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Position and OffSet </title>
+    <style>
+        .container{
+            background-color: darkgoldenrod;
+            width: 650px;
+            height: 375px;
+        }
+        h3{
+            text-align: center;
+            padding: 12px;
+            background-color: brown;
+        }
+        p{
+            text-align: center;
+            padding: 12px;
+            margin: 12px;
+            background-color: aquamarine;
+        }
+        #positionbtn, #offsetbtn{
+            position: relative;
+            margin: 12px;
+            top: 150px;
+            background-color: azure;
+            border: 2px solid sienna;
+            border-radius: 13px;
+        }
+    </style>
+</head>
+<body>
+    <h2> Position and Offset Method </h2>
+    <div class="container">
+        <h3> Let's See how to use position and offset Method</h3>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab veniam nostrum laudantium temporibus nihil deserunt rerum laborum quibusdam similique sapiente soluta enim, distinctio ipsum neque ea, dolore iusto corporis et aliquid minus natus! Odio, molestias architecto soluta blanditiis quia quo? </p>
+        <button id="positionbtn"> Position </button>
+        <button id="offsetbtn"> Offset </button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#positionbtn").click(function(){
+                console.log($("p").position())
+            })
+            $("#offsetbtn").click(function(){
+                console.log($("p").offset())
+            })
+        })
+    </script>    
+</body>
+</html>
