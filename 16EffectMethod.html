@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Effect Methods </title>
+    <style>
+        body {
+            background-color: #FDA085;
+        }
+
+        .container {
+            background-image: linear-gradient(#E5B2CA, #005BEA);
+        }
+
+        h3 {
+            background-color: cadetblue;
+            border-radius: 9px;
+            height: 35px;
+            text-align: center;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .list-flex {
+            display: flex;
+            list-style: none;
+            justify-content: space-evenly;
+        }
+
+        .list {
+            margin: 0;
+            height: 120px;
+            width: 120px;
+            gap: 2rem;
+            background-color: #FDA085;
+            top: 200px;
+        }
+
+        #hideBtn,
+        #showBtn,
+        #toggleBtn,
+        #fadeInBtn,
+        #fadeOutBtn,
+        #fadeToggleBtn,
+        #fadeToBtn,
+        #slideDownBtn,
+        #slideUpBtn,
+        #slideToggleBtn {
+            border-radius: 20px;
+            border: 2px solid #FDA085;
+            background-color: #f6d365;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h3> Use of Various Effect Methods </h3>
+    <div class="container">
+        <h4> Let's see the lits of Effect Methods </h4>
+        <ul type="disc" class="list-flex">
+            <li class="list">hide()
+                <button id="hideBtn">Hide</button>
+            </li>
+            <li class="list">show()<button id="showBtn">Show</button></li>
+            <li class="list">toggle()<button id="toggleBtn">Toggle</button></li>
+            <li class="list">fadeIn()<button id="fadeInBtn">FadeIn</button></li>
+            <li class="list">fadeOut()<button id="fadeOutBtn">FadeOut</button></li>
+            <li class="list">fadeToggle() <button id="fadeToggleBtn">FadeToggle</button></li>
+            <li class="list">fadeTo()<button id="fadeToBtn">FadeTo</button></li>
+            <li class="list">slideDown()<button id="slideDownBtn">Slide Down</button></li>
+            <li class="list">slideUp() <button id="slideUpBtn">Slide Up</button></li>
+            <li class="list">slideToggle()<button id="slideToggleBtn">Slide Toggle</button></li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#hideBtn").click(function () {
+                $("li:first-child").hide()
+            })
+            $("#showBtn").click(function () {
+                $("li:first-child").show()
+            })
+            $("#toggleBtn").click(function () {
+                $("li:first-child").toggle()
+            })
+
+            $("#fadeInBtn").click(function () {
+                $("li:nth-child(3)").fadeIn()
+            })
+
+            $("#fadeOutBtn").click(function () {
+                $("li:nth-child(3)").fadeOut()
+            })
+            $("#fadeToggleBtn").click(function () {
+                $("li:nth-child(3)").fadeToggle()
+            })
+            
+            $("#fadeToBtn").click(function () {
+                $("li:nth-child(3)").fadeTo(100, 0.1)
+            })
+
+            $("#slideDownBtn").click(function () {
+                $("li:first-child").slideDown()
+            })
+            $("#slideUpBtn").click(function () {
+                $("li:first-child").slideUp()
+            })
+            $("#slideToggleBtn").click(function () {
+                $("li:first-child").slideToggle()
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>

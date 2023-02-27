@@ -20,7 +20,10 @@
             background-color: rgba(16, 111, 111, 0.556);
             border-radius: 8px;
         }
-        .para1, .para2, .para3{
+
+        .para1,
+        .para2,
+        .para3 {
             background-color: salmon;
             padding: 8px;
             border: 2px solid saddlebrown;
@@ -28,13 +31,14 @@
             border-radius: 8px;
         }
 
-        .para{
+        .para {
             display: flex;
             justify-content: space-between;
         }
 
 
-        #replacewithBtn, #replaceallBtn{
+        #replacewithBtn,
+        #replaceallBtn {
             border: 3px solid steelblue;
             background-color: rgba(169, 169, 169, 0.612);
             border-radius: 6px;
@@ -44,10 +48,10 @@
             margin: 12px;
         }
 
-        #replacewithBtn:hover, #replaceallBtn:hover{
+        #replacewithBtn:hover,
+        #replaceallBtn:hover {
             color: brown;
         }
-
     </style>
 </head>
 
@@ -71,19 +75,19 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js"
         integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 
-        <script>
-            $(document).ready(function(){
-                $("#replacewithBtn").click(function() {
-                    $("#box h2").replaceWith("<h2> Replacing Tags Jquery Method </h2>")
-                    $(".para2").replaceWith("<p> There are many different ways to organize a paragraph. The organization you choose will depend on the controlling idea of the paragraph. Below are a few possibilities for organization, with links to brief examples: </p>")
-                  })
-
-                  $("#replaceallBtn").click(function() {
-                    $("<p>From the list above, let’s choose “illustration” as our rhetorical purpose. We’ll walk through a 5-step process for building a paragraph that illustrates a point in an argument. For each step there is an explanation and example. Our example paragraph will be about human misconceptions of piranhas.</p>").replaceAll("#box p")
-                  })
-    
+    <script>
+        $(document).ready(function () {
+            $("#replacewithBtn").click(function () {
+                $("#box h2").replaceWith("<h2> Replacing Tags Jquery Method </h2>")
+                $(".para2").replaceWith("<p> There are many different ways to organize a paragraph. The organization you choose will depend on the controlling idea of the paragraph. Below are a few possibilities for organization, with links to brief examples: </p>")
             })
-        </script>
+
+            $("#replaceallBtn").click(function () {
+                $("<p>From the list above, let’s choose “illustration” as our rhetorical purpose. We’ll walk through a 5-step process for building a paragraph that illustrates a point in an argument. For each step there is an explanation and example. Our example paragraph will be about human misconceptions of piranhas.</p>").replaceAll("#box p")
+            })
+
+        })
+    </script>
 </body>
 
 </html>
