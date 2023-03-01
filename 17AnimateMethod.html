@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Animate Methods </title>
+    <style>
+        .container {
+            background-color: #d96f6f;
+            width: 350px;
+            height: 230px;
+        }
+
+        h4,
+        p {
+            padding: 10px;
+        }
+
+        button {
+            margin: 10px;
+            border: 2px solid saddlebrown;
+            background-color: sandybrown;
+            font-weight: 700;
+            border-radius: 8px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h3> Animate Method Using JQuery</h3>
+    <div class="container">
+        <h4> Let's See Animate(Speed, Opacity, Function) </h4>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae incidunt, impedit dolorem fugiat, molestiae
+            amet ex maiores sequi tempora sint inventore alias accusantium? Magnam ipsum at labore doloremque et velit!
+        </p>
+    </div>
+    <button id="animateBtn"> Animate </button>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#animateBtn").click(function () {
+                $('.container').animate({
+                    width: 400
+                }, 4000)
+            })
+        })
+
+        // Use of confirm()
+        let deletepost = confirm("Do you really want to delete your post?")
+        console.log(deletepost)
+    </script>
 </body>
+
 </html>
