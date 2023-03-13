@@ -31,7 +31,7 @@
 <body>
     <h3> Animate Method Using JQuery</h3>
     <div class="container">
-        <h4> Let's See Animate(Speed, Opacity, Function) </h4>
+        <h4> Let's See Animate({params}, speed, callback) </h4>
         <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae incidunt, impedit dolorem fugiat, molestiae
             amet ex maiores sequi tempora sint inventore alias accusantium? Magnam ipsum at labore doloremque et velit!
         </p>
@@ -45,8 +45,9 @@
         $(document).ready(function () {
             $("#animateBtn").click(function () {
                 $('.container').animate({
-                    width: 400
-                }, 4000)
+                    width: 800,
+                    padding:32
+                }, 1000)
             })
         })
 

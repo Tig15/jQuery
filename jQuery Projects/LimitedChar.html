@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Area</title>
+    
+</head>
+<body>
+    <label> Maximum 20 Characters </label><br>
+    <textarea rows="5" cols="14" id="texea" maxlength="20"></textarea>
+    <br>
+    <span id="pchar"> 20</span> Character(s) Remaining
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script>
+        var maxlength=20;
+        $("textarea").keyup(function(e){
+            var textlen = maxlength - $(this).val().length;
+            $("#pchar").text(textlen)
+        })
+    </script>
+</body>
+</html>

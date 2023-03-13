@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disbale Submit Button</title>
+    <style>
+        #submitbtn{
+            position: absolute;
+            margin-left: 10px;
+            top: 30px;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="accept" >I accept
+        <input type="submit" id="submitbtn" disabled="disabled">
+    </div>
+  
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#accept").change(function (e) { 
+                // console.log(e.target.checked)
+                if($("#submitbtn").is(':disabled')){
+                    $("#submitbtn").removeAttr('disabled')
+                }
+                else{
+                    $("#submitbtn").attr('disabled','disabled')
+                }
+             })
+        })
+    </script>
+</body>
+</html>

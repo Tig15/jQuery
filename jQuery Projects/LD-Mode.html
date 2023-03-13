@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light & Dark Mode</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+        *{
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+           
+        }
+        .container{
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h2{
+            margin: 12px;
+        }
+        p{
+          width: 800px;
+          text-align: justify;
+        }
+        .toggle-btn{
+            height: 27px;
+            position: fixed;
+            top: 40px;
+            right: 200px;
+            background-color: #474E68;
+            color: #E5E5CB;
+            border: 3px solid #000000;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .toggle-btn i{
+            margin-left: 5px;
+        }
+        .changeMode{
+            background-color: black;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Light Mode</h2>
+      <p>
+        A paragraph is a series of sentences that are organized and coherent,
+        and are all related to a single topic. Almost every piece of writing you
+        do that is longer than a few sentences should be organized into
+        paragraphs. This is because paragraphs show a reader where the
+        subdivisions of an essay begin and end, and thus help the reader see the
+        organization of the essay and grasp its main points. Paragraphs can
+        contain many different kinds of information. A paragraph could contain a
+        series of brief examples or a single long illustration of a general
+        point. It might describe a place, character, or process; narrate a
+        series of events; compare or contrast two or more things; classify items
+        into categories; or describe causes and effects. Regardless of the kind
+        of information they contain, all paragraphs share certain
+        characteristics. One of the most important of these is a topic sentence.
+      </p>
+      <button class="toggle-btn" id="toggle-btn">
+        <span>Dark Mode</span><i class="fa-regular fa-moon"></i>
+      </button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#toggle-btn").click(function () { 
+                $("body").toggleClass("changeMode")
+                $(this).css("border","3px solid white")
+
+                $("span").text($("span").text()=== "Light Mode" ? "Dark Mode": "Light Mode")
+             })
+
+             $("#toggle-btn").click(function () { 
+                $(this).find("i").toggleClass("fa-moon fa-sun")
+
+                $("h2").text($("h2").text()=== "Light Mode" ? "Dark Mode" : "Light Mode")
+             })
+        })
+    </script>
+  </body>
+</html>
